@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import BlogPost, { Section, Heading } from "./blog-post";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <BlogPost>
+      <Section>
+        <Heading>This would be the first item in the TOC</Heading>
+
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, libero
+          facere officia natus totam voluptatibus magni nihil veniam eveniet!
+          Impedit cumque atque vero? Nulla sit est officiis ratione assumenda
+          molestias.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </Section>
+
+      <Section>
+        <Heading>This is the second heading</Heading>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dicta
+          voluptates, nesciunt officia delectus alias nulla, doloribus iure
+          suscipit ducimus amet impedit qui, placeatoff iciis iusto assumenda
+          beatae ipsam reprehenderit.
+        </p>
+      </Section>
+    </BlogPost>
   );
 }
-
-export default App;
