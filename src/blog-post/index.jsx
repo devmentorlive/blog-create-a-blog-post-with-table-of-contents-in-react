@@ -1,4 +1,5 @@
 import { Children } from "react";
+import { parameterize } from "../modules/string";
 import Section from "./section";
 import Heading from "./heading";
 export { Section, Heading };
@@ -20,7 +21,9 @@ export default function BlogPost({ children, title }) {
 
       <ul>
         {headings.map((heading, i) => (
-          <li key={i}>{heading}</li>
+          <li key={i}>
+            <a href={`#${parameterize(heading.props.children)}`}>{heading}</a>
+          </li>
         ))}
       </ul>
 
